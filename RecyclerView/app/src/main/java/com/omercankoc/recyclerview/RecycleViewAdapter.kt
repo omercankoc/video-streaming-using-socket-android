@@ -9,9 +9,7 @@ import com.omercankoc.recyclerview.databinding.RecyclerRowBinding
 
 class RecycleViewAdapter(private val languageList : ArrayList<Languages>) : RecyclerView.Adapter<RecycleViewAdapter.LanguageHolder>() {
 
-    class LanguageHolder(val binding : RecyclerRowBinding) : RecyclerView.ViewHolder(binding.root) {
-
-    }
+    class LanguageHolder(val binding : RecyclerRowBinding) : RecyclerView.ViewHolder(binding.root) { }
 
     // View holder ile olusturuldugunda yurut. Layout ile bagla.
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageHolder {
@@ -24,7 +22,6 @@ class RecycleViewAdapter(private val languageList : ArrayList<Languages>) : Recy
         holder.binding.textViewRecycleItem.text = languageList[position].language
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context,DetailsActivity::class.java)
-            //intent.putExtra("languaage", languageList[position])
             Singleton.chosenLanguage =languageList[position]
             holder.itemView.context.startActivity(intent)
         }
