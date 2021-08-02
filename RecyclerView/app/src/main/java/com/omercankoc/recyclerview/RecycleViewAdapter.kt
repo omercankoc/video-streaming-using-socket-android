@@ -29,7 +29,7 @@ class RecycleViewAdapter(private val languageList : ArrayList<Languages>) : Recy
             // Veriyi Intent ile yolla.
             //intent.putExtra("language", languageList[position])
 
-            // Veriyi Singleton ile yolla
+            // Veriyi Singleton ile yolla.
             Singleton.chosenLanguage = languageList[position]
 
             holder.itemView.context.startActivity(intent)

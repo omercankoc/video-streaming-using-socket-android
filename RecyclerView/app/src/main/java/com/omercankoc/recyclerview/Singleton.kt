@@ -1,6 +1,6 @@
 package com.omercankoc.recyclerview
 
+// Singleton : Icerisinde tek bir adet nesne barindiran sinif.
 object Singleton {
-    // Singleton : Icerisinde tek bir adet nesne barindiran sinif.
     var chosenLanguage : Languages? = null
 }
